@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../../src/App.css";
 
-const Item = ({ item, index, setList, list }) => {
+const Item = ({ task, index, setList, list }) => {
+  console.log(task);
   const [isChecked, setIsChecked] = useState(false);
 
   const handleDelete = (id) => {
@@ -14,9 +15,9 @@ const Item = ({ item, index, setList, list }) => {
         onClick={() => setIsChecked(!isChecked)}
         className={isChecked ? "completed" : null}
       >
-        {item.task}
+        {task.task_name}
       </h3>
-      <h5>{item.category}</h5>
+      <h5>{task.title}</h5>
       <h3 onClick={() => handleDelete(index)}>x</h3>
     </div>
   );

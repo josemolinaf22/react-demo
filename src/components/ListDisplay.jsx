@@ -10,11 +10,11 @@ const ListDisplay = (props) => {
       if (selected) return item.category === selected;
       return item;
     })
-    .map((item, index) => {
+    .map((task, index) => {
       return (
         <Item
           key={index}
-          item={item}
+          task={task}
           index={index}
           setList={setList}
           list={list}
